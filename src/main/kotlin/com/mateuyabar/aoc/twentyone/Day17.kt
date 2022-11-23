@@ -2,7 +2,7 @@ package com.mateuyabar.aoc.twentyone
 
 import kotlin.math.max
 
-val text = "target area: x=56..76, y=-162..-134\n"
+private val text = "target area: x=56..76, y=-162..-134\n"
 
 
 fun main(){
