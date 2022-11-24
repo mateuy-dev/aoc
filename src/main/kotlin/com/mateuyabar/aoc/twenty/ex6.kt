@@ -8,11 +8,25 @@ import com.mateuyabar.aoc.util.splitByAnySpace
 
 private val exercise = AocExercice(
     year = 2020,
-    day = 0,
+    day = 6,
     level = 1   ,
     samples = listOf(
-        AocSample(output = "",
-            input ="""""")
+        AocSample(output = "11",
+            input ="""abc
+
+a
+b
+c
+
+ab
+ac
+
+a
+a
+a
+a
+
+b""")
     ),
 )
 
@@ -22,6 +36,10 @@ fun main() {
 
 private val solution = object : AocSolution(exercise) {
     override fun calculate(input: String): String {
-        TODO()
+        val data = input.split("\n\n").map { it.lines().map { it.toSet() } }
+        return data.sumOf{ countQuestions(it)}.toString()
     }
+
+    private fun countQuestions(it: List<Set<Char>>) =it.flatten().toSet().count()
+
 }

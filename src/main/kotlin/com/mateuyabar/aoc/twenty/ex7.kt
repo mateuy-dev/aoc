@@ -8,7 +8,7 @@ import com.mateuyabar.aoc.util.splitByAnySpace
 
 private val exercise = AocExercice(
     year = 2020,
-    day = 0,
+    day = 7,
     level = 1   ,
     samples = listOf(
         AocSample(output = "",
